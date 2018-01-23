@@ -1,0 +1,34 @@
+html.sheen {
+    ul.primary, ul.buddypress {
+        position: relative;
+    }
+    ul.primary {
+        background: rgba(255, 255, 255, .1);
+        &:after {
+            content: "";
+            width: 80px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -80px;
+            background: url(../img/interface/primary-edge.png);
+        }
+    }
+    ul.buddypress {
+        background: rgba(255, 255, 255, .1);
+        &:before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -80px;
+            background: url(../img/interface/secondary-edge.png);
+        }
+    }
+    ul.sub-menu {
+        background-image: url(../img/interface/edge.png);
+    }
+}

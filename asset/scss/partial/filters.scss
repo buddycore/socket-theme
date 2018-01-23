@@ -1,0 +1,317 @@
+nav.filter {
+    line-height: 50px;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 1);
+    font-size: 10px;
+    font-weight: 700;
+    float: left;
+    width: 100%;
+    div.links {
+        float: left;
+        margin-left: 5px;
+        ul {
+            > li {
+                float: left;
+                position: relative;
+                > a {
+                    color: rgba(0, 0, 0, .5);
+                    padding: 0 10px;
+                    float: left;
+                    line-height: 30px;
+                    transition: .2s linear color;
+                    span {
+                        width: 30px;
+                        height: 30px;
+                        display: block;
+                        float: right;
+                        margin-left: 10px;
+                        transition: .2s linear background;
+                        background: rgba(0, 0, 0, .1);
+                        &:before {
+                            content: "\f107";
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            display: block;
+                            float: right;
+                            text-align: center;
+                            transition: .2s linear transform;
+                        }
+                        &:hover, &:active {
+                            background: rgba(0, 0, 0, .2);
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+                    span.close {
+                        background: rgba(0, 0, 0, .2);
+                        &:before {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    &:hover, &:active {
+                        color: rgba(0, 0, 0, .75);
+                    }
+                }
+                ul.sub-menu {
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 40px;
+                    left: 0;
+                    background: rgba(255, 255, 255, 1);
+                    width: 200px;
+                    transition: .2s linear opacity, .2s linear visibility;
+                    li {
+                        float: none;
+                        a {
+                            float: none;
+                            display: block;
+                            line-height: 30px;
+                            span {
+                                width: 30px;
+                                height: 30px;
+                                line-height: 30px;
+                                display: block;
+                                float: right;
+                                text-align: center;
+                                margin-right: -10px;
+                                transition: .2s linear background;
+                                &:before {
+                                    content: "\f107";
+                                    width: 30px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    display: block;
+                                    float: right;
+                                    text-align: center;
+                                    transform: rotate(-90deg);
+                                    transition: .2s linear transform;
+                                }
+                                &:hover, &:active {
+                                    background: rgba(0, 0, 0, .1);
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                            span.close {
+                                background: rgba(0, 0, 0, .1);
+                                &:before {
+                                    transform: rotate(90deg);
+                                }
+                            }
+                        }
+                        ul.sub-menu {
+                            top: 0;
+                            left: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.other {
+        float: right;
+        margin-right: 10px;
+    }
+}
+
+form.search-form {
+    width: 240px;
+    float: right;
+    fieldset {
+        input, button {
+            float: left;
+            line-height: 30px;
+        }
+        input {
+            width: 70%;
+            background: palette(Grey, 400);
+            padding: 0 10px;
+            font-size: 10px;
+            line-height: 30px;
+            height: 30px;
+            color: palette(Grey, 700);
+            transition: .2s linear background;
+        }
+        input:focus {
+            background: palette(Grey, 300);
+        }
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: palette(Grey, 600);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: palette(Grey, 600);
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: palette(Grey, 600);
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: palette(Grey, 600);
+        }
+        button {
+            width: 30%;
+            background: palette(Grey, 500);
+            color: rgba(255, 255, 255, .75);
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 10px;
+            transition: .2s linear background;
+            &:hover, &:active {
+                background: palette(Grey, 600);
+            }
+        }
+    }
+}
+
+nav.filter-responsive {
+    background: #FFF;
+    height: 50px;
+    line-height: 50px;
+    display: none;
+    position: relative;
+    @media screen and (max-width: 800px) {
+        display: block;
+    }
+    div.links, div.other {
+
+    }
+    div.links {
+        float: left;
+        width: 20%;
+        ul {
+            height: 50px;
+            li {
+                button.toggle-filter {
+                    width: 100%;
+                    height: 50px;
+                    background: palette(Grey, 600);
+                    line-height: 50px;
+                    color: palette(Grey, 800);
+                    &:before {
+                        width: 100%;
+                        text-align: center;
+                        content: "\f0b0";
+                    }
+                    span {
+                        display: none;
+                    }
+                }
+                button.toggle-filter.close {
+                    &:before {
+                        content: "\f00d";
+                    }
+                }
+                ul.active {
+                    display: block;
+                }
+                ul {
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    right: 0;
+                    background: palette(Grey, 600);
+                    font-size: 10px;
+                    font-weight: 700;
+                    float: none;
+                    height: auto;
+                    display: none;
+                    z-index: 11;
+                    li {
+                        &:last-child {
+                            a {
+                                border-bottom: none;
+                            }
+                        }
+                        a {
+                            line-height: 40px;
+                            display: block;
+                            padding: 0 10px;
+                            color: palette(Grey, 400);
+                            span {
+                                float: right;
+                                height: 40px;
+                                width: 40px;
+                                margin-right: -10px;
+                                &:before {
+                                    content: "\f107";
+                                    width: 40px;
+                                    text-align: center;
+                                }
+                                span {
+                                    display: none;
+                                }
+                            }
+                            span.close {
+                                transform: rotate(180deg);
+                            }
+                        }
+                        ul.sub-menu {
+                            display: none;
+                            background: palette(Grey, 700);
+                            li {
+                                a {
+                                    color: palette(Grey, 400);
+                                    &:before {
+                                        content: "-";
+                                        float: left;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                ul.sub-menu {
+                                    background: palette(Grey, 800);
+                                    li {
+                                        &:last-child {
+                                            a {
+                                                border-bottom: none;
+                                            }
+                                        }
+                                        a {
+                                            color: palette(Grey, 500);
+                                            &:before {
+                                                content: "- -";
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ul.sub-menu.active {
+                            display: block;
+                            position: relative;
+                            top: auto;
+                            left: auto;
+                            right: auto;
+                            bottom: auto;
+                        }
+                    }
+                    li.search {
+                        form {
+                            fieldset {
+                                input, button {
+
+                                }
+                                input {
+
+                                }
+                                button {
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.other {
+        float: right;
+        width: 80%;
+        padding: 10px;
+        form {
+            width: 100%;
+        }
+    }
+}

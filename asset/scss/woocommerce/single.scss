@@ -1,0 +1,392 @@
+div.woocommerce-message {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 20px 0 20px;
+    display: block;
+    clear: both;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    a.wc-forward {
+        display: none;
+    }
+}
+
+div.product {
+    clear: both;
+    div.product-main {
+        background: #FFF;
+        padding: 20px;
+        max-width: 1024px;
+        margin: 0 auto;
+        overflow-y: hidden;
+        position: relative;
+    }
+    span.onsale {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: $primary;
+        color: rgba(255, 255, 255, .5);
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 10px;
+        z-index: 10;
+    }
+    div.images {
+        float: left;
+        width: 40%;
+        a {
+            img {
+                border: 1px solid palette(Grey, 300);
+                padding: 5px;
+            }
+        }
+        div.thumbnails {
+            width: 100%;
+            margin-top: 20px;
+            float: left;
+            margin: 5px 0 -5px 0;
+            a {
+                width: 25%;
+                float: left;
+                padding: 10px 10px 0 0;
+                img {
+                    border: 1px solid palette(Grey, 300);
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    div.summary {
+        float: left;
+        padding-left: 20px;
+        width: 60%;
+        h1 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        div.woocommerce-product-rating {
+            font-size: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+            color: $primary;
+            span {
+                strong.rating {
+
+                }
+            }
+            a.woocommerce-review-link {
+                display: none;
+            }
+        }
+        p.price {
+            margin-top: 10px;
+            font-weight: 700;
+            display: block;
+            font-size: 12px;
+            margin-bottom: 20px;
+            display: block;
+            overflow-y: hidden;
+            del, ins {
+                margin: 0 10px 0 0;
+                display: inline-block;
+                &:before {
+                    font-family: 'Titillium Web', sans-serif !important;
+                    font-weight: 700;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    margin-right: 5px;
+                }
+            }
+            del {
+                &:before {
+                    content: "Was: ";
+                }
+                span.amount {
+                    
+                }
+            }
+            ins {
+                text-decoration: none;
+                &:before {
+                    content: "Now: ";
+                }
+                span.amount {
+
+                }
+            }
+        }
+        form.cart {
+            margin-top: 20px;
+            table.variations {
+                tbody {
+                    tr {
+                        font-size: 12px;
+                        td.label {
+                            text-transform: capitalize;
+                            padding-right: 5px;
+                            font-weight: 700;
+                        }
+                        td.value {
+                            select {
+                                width: 100%;
+                                padding: 5px;
+                                font-size: 12px;
+                                font-weight: 400;
+                                border: 1px solid palette(Grey, 400);
+                                background: palette(Grey, 200);
+                                color: palette(Grey, 800);
+                                transition: .1s linear border, .1s linear background;
+                            }
+                            select:focus {
+                                background: palette(Grey, 100);
+                                border: 1px solid $primary;
+                            }
+                            a {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+            div.woocommerce-variation-price {
+                font-weight: 700;
+                margin-top: 20px;
+                font-size: 12px;
+            }
+            div.quantity {
+                width: 100px;
+                padding-right: 20px;
+                margin-top: 20px;
+                input {
+                    width: 100%;
+                    padding: 5px;
+                    font-size: 14px;
+                    border: 1px solid palette(Grey, 400);
+                    background: palette(Grey, 200);
+                    color: palette(Grey, 800);
+                    transition: .1s linear border, .1s linear background;
+                }
+                input:focus, select:focus, textarea:focus {
+                    background: palette(Grey, 100);
+                    border: 1px solid $primary;
+                }
+            }
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                text-align: center;
+                font-size: 10px;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, .75);
+                border: none;
+                cursor: pointer;
+                background: $primary;
+            }
+        }
+        div.product_meta {
+            clear: both;
+            margin-top: 20px;
+            font-size: 12px;
+            border-top: 1px solid palette(Grey, 300);
+            padding-top: 10px;
+            display: block;
+            width: 100%;
+            line-height: 18px;
+            > span {
+                display: block;
+                clear: both;
+                margin-top: 10px;
+            }
+            span.sku_wrapper {
+                font-weight: 700;
+                span {
+                    font-weight: 400;
+                }
+            }
+            span.posted_in {
+                font-weight: 700;
+            }
+            span.tagged_as {
+                margin-top: 10px;
+                a {
+                    text-indent: 0;
+                    background: palette(Grey, 800);
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0 10px;
+                    display: inline-block;
+                    color: palette(Grey, 300) !important;
+                    margin: 0 5px 5px 0;
+                    font-family: 'Source Code Pro', monospace;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    div.woocommerce-tabs {
+        background: #FFF;
+        padding: 0 20px 20px 20px;
+        max-width: 1024px;
+        margin: 0 auto;
+        overflow-y: hidden;
+        position: relative;
+        ul.tabs {
+            border-bottom: 1px solid palette(Grey, 400);
+            overflow-y: hidden;
+            margin-bottom: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            li {
+                float: left;
+                margin: 0 5px 0 0;
+                a {
+                    padding: 10px;
+                    display: block;
+                    float: left;
+                    border: 1px solid palette(Grey, 400);
+                    border-bottom: none;
+                    color: palette(Grey, 700);
+                }
+            }
+            li.active {
+                a {
+                    background: palette(Grey, 400);
+                }
+            }
+        }
+        div.woocommerce-Tabs-panel {
+            clear: both;
+            display: none;
+            h2 {
+
+            }
+            p {
+
+            }
+        }
+    }
+    div.related {
+    }
+}
+
+div.woocommerce-Reviews {
+    ol.commentlist {
+        li {
+            &:before {
+                display: none;
+            }
+            padding-left: 0;
+        }
+    }
+    div.comment-respond {
+        margin-top: 20px;
+    }
+    p.stars {
+        overflow-y: hidden;
+        span {
+            a {
+                float: left;
+                text-indent: -9999px;
+                margin-right: 2px;
+                &:before {
+                    text-indent: 0;
+                    content: "\f006";
+                    font-size: 18px;
+                }
+            }
+            a:hover, a:active {
+                &:before {
+                    content: "\f005";
+                }
+            }
+            a.active {
+                &:before {
+                    content: "\f005";
+                }
+            }
+        }
+    }
+    p {
+        clear: both;
+    }
+}
+
+.pp_close {
+    &:before {
+        content: "\f00d" !important;
+    }
+}
+
+.pp_expand {
+    &:before {
+        content: "\f065" !important;
+    }
+}
+
+.currentTextHolder {
+    line-height: 30px;
+}
+
+
+.pp_arrow_next, .pp_arrow_previous {
+    height: 30px !important;
+    width: 30px !important;
+    line-height: 30px !important;
+    border-radius: 0 !important;
+}
+.pp_arrow_next {
+    &:before {
+        content: "\f061" !important;
+    }
+}
+
+.pp_arrow_previous {
+    &:before {
+        content: "\f060" !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    div.product {
+        div.product-main {
+            display: flex;
+            flex-direction: column;
+        }
+        div.images, div.summary {
+            float: none;
+            width: 100%;
+            padding: 0;
+            overflow-y: hidden;
+        }
+        div.summary {
+            order: 1;
+        }
+        div.images {
+            margin-top: 20px;
+            order: 2;
+            > a {
+                img {
+                    width: 100%;
+                }
+            }
+            div.thumbnails {
+                margin: 5px -5px 0 -5px;
+                a {
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    div.woocommerce-message{ 
+        padding: 20px;
+    }
+}

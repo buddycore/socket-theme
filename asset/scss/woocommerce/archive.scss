@@ -1,0 +1,232 @@
+h1.page-title, nav.woocommerce-breadcrumb {
+    display: none;
+}
+
+p.woocommerce-result-count {
+    float: left;
+    line-height: 30px;
+    margin: 20px 0 0 20px;
+    font-size: 12px;
+}
+
+form.woocommerce-ordering {
+    float: right;
+    margin: 20px 20px 0 0;
+    select {
+        background: #FFF;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 0 0 5px;
+        font-size: 12px;
+        font-weight: 400;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    p.woocommerce-result-count {
+        margin: 10px 0 0 10px;
+    }
+    form.woocommerce-ordering {
+        margin: 10px 10px 0 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    p.woocommerce-result-count {
+        display: none;
+    }
+    form.woocommerce-ordering {
+        margin: 10px 10px 0 10px;
+        float: none;
+        select {
+            width: 100%;
+        }
+    }
+}
+
+ul.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    clear: both;
+    @media screen and (max-width: 650px) {
+        padding: 5px;
+    }
+    li {
+        display: flex;
+        padding: 10px;
+        width: 25%;
+        @media screen and (max-width: 1100px) {
+            width: 33.3333%;
+        }
+        @media screen and (max-width: 850px) {
+            width: 50%;
+        }
+        @media screen and (max-width: 650px) {
+            padding: 5px;
+        }
+        @media screen and (max-width: 600px) {
+            width: 100%;
+        }
+        div.inner {
+            background: #FFF;
+            width: 100%;
+            position: relative;
+        }
+        a {
+            color: palette(Grey, 900);
+            text-align: center;
+            span.onsale {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $primary;
+                color: rgba(255, 255, 255, .5);
+                font-size: 10px;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 10px;
+                z-index: 10;
+            }
+            img {
+                width: 100%;
+                transition: .2s linear opacity;
+            }
+            div.details {
+                padding: 20px 20px 40px 20px;
+                overflow-y: hidden;
+            }
+            h3 {
+                font-weight: 700;
+                font-size: 18px;
+            }
+            div.star-rating {
+                font-size: 10px;
+                margin-top: 10px;
+                font-weight: 700;
+                color: $primary;
+                span {
+                    strong.rating {
+
+                    }
+                }
+            }
+            span.price {
+                margin-top: 10px;
+                font-weight: 700;
+                display: block;
+                font-size: 12px;
+                margin-bottom: 20px;
+                display: block;
+                overflow-y: hidden;
+                del, ins {
+                    margin: 0 5px;
+                    display: inline-block;
+                    &:before {
+                        font-family: 'Titillium Web', sans-serif !important;
+                        font-weight: 700;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        margin-right: 5px;
+                    }
+                }
+                del {
+                    &:before {
+                        content: "Was: ";
+
+                    }
+                    span.amount {
+                        
+                    }
+                }
+                ins {
+                    text-decoration: none;
+                    &:before {
+                        content: "Now: ";
+                    }
+                    span.amount {
+
+                    }
+                }
+            }
+        }
+        a:hover, a:active {
+            img {
+                opacity: .8;
+            }
+        }
+        div.actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            line-height: 40px;
+            background: palette(Grey, 500);
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        a.button {
+            background: palette(Grey, 600);
+            color: rgba(255, 255, 255, .5);
+            display: block;
+            padding: 0 20px;
+            float: right;
+            transition: .2s linear padding-left;
+        }
+        a.button.loading {
+            background: palette(Grey, 600) url(../img/interface/loader.gif) no-repeat 15px center !important;
+            padding-left: 40px;
+        }
+        a.added_to_cart {
+            padding: 0 15px;
+            color: palette(Grey, 700);
+        }
+    }
+}
+
+nav.woocommerce-pagination {
+    margin: 0 20px 20px 20px;
+    height: 40px;
+    overflow-y: hidden;
+    font-size: 10px;
+    position: relative;
+    font-weight: 700;
+    @media screen and (max-width: 650px) {
+        margin: 0 10px 10px 10px;
+    }
+    &:after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        left: 0;
+        right: 0;
+        content: "";
+        z-index: 1;
+    }
+    ul.page-numbers {
+        position: relative;
+        z-index: 2;
+        background: palette(Grey, 400);
+        overflow-y: hidden;
+        float: left;
+        li {
+            float: left;
+            a.page-numbers, span.page-numbers {
+                background: palette(Grey, 500);
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                float: left;
+                padding: 0 17px;
+                margin: 0 0 0 0;
+                color: palette(Grey, 700);
+            }
+            span.current {
+                background: #FFF;
+            }
+        }
+    }
+}

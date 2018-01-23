@@ -1,0 +1,16 @@
+nav.filter {
+  line-height: 50px;
+  background: white;
+}
+
+nav.filter div.links {
+  float: left;
+}
+
+nav.filter div.links ul li {
+  float: left;
+}
+
+nav.filter div.other {
+  float: right;
+}

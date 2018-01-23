@@ -1,0 +1,22 @@
+:before {
+    font-family: FontAwesome;
+    font-size: 14px;
+    font-weight: normal;
+    float: left;
+}
+
+.pp_woocommerce {
+    :before {
+        font-family: FontAwesome !important;
+        font-size: 12px !important;
+    }
+}
+
+.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+ul.sub-menu {
+    z-index: 10;
+}
